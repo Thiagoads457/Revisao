@@ -16,7 +16,7 @@
 
     <div class="col">
         <label for="desempenho">Escala de Desempenho (1 a 5)</label>
-        <input type="text" id="desempenho" name="desempenho" class="form-control" />
+        <input type="number" id="desempenho" name="desempenho" class="form-control" />
     </div>  
 </div>
 
