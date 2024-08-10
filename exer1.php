@@ -1,4 +1,4 @@
-<?php require("cabecalho.php"); ?>
+<?php require_once("cabecalho.php"); ?>
 
 <h1>Exercicio 1</h1>
 <form action="exer1resp.php" method="POST">
