@@ -1,6 +1,6 @@
 <?php require_once("cabecalho.php"); ?>
 
-<h1>Exercicio 1</h1>
+<h3>Exercicio 1</h3>
 <form action="exer1resp.php" method="POST">
 
 <div class="row">
