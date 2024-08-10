@@ -8,3 +8,10 @@ function calcularTempo($hora_entrada,$hora_saida){
     $resultado = $resultado->format("%H:%I");
     return $resultado;
 }
+
+function calcularSalarioSemanal($hora_mes, $valor_hora) {
+    $semanasMes = 4.5;
+    $horasSemana = $hora_mes / $semanasMes;
+    $salarioSemanal = $horasSemana * $valor_hora;
+    return $salarioSemanal;
+}
