@@ -1,6 +1,6 @@
 <?php require_once ("cabecalho.php");?>
 
-<h3>Exercicio 2</h3>
+<h4>Cálculo Salário Semanal</h4>
 <form action="exer2resp.php" method="POST">
 
 <div class="row">
@@ -11,7 +11,7 @@
 
     <div class="col">
         <label for="valor_hora">Valor da Hora</label>
-        <input type="number" id="valor_hora" name="valor_hora" class="form-control" />
+        <input type="number" id="valor_hora" name="valor_hora" class="form-control" placeholder="R$" />
     </div>    
 </div>
 

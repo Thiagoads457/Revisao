@@ -15,3 +15,16 @@ function calcularSalarioSemanal($hora_mes, $valor_hora) {
     $salarioSemanal = $horasSemana * $valor_hora;
     return $salarioSemanal;
 }
+
+function calcular_bonus($lucro_empresa, $nome_funcionario, $desempenho){
+    if ($desempenho <1 || $desempenho > 5) {
+        return "Avalição inválida. Deve estar entre 1 e 5.";
+    }
+
+    $percentual_bonus = 0.1 + ($desempenho -1) * 0.02;
+
+    $bonus = $lucro_empresa * $percentual_bonus /100;
+
+    return $bonus;
+
+}

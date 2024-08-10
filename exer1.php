@@ -1,6 +1,6 @@
 <?php require_once("cabecalho.php"); ?>
 
-<h3>Exercicio 1</h3>
+<h4>Cálculo Total de Horas Trabalhadas</h4>
 <form action="exer1resp.php" method="POST">
 
 <div class="row">
