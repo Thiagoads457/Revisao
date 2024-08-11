@@ -25,3 +25,26 @@ function calcular_bonus($lucro_empresa, $desempenho){
     return $bonus;
 
 }
+
+function pode_realizar($hora_tarefa, $complexidade_tarefa, $hora_disponivel, $nivel_experiencia, $nome_funcionario, $nome_tarefa) {
+    $hora_tarefa = (float) $hora_tarefa;
+    $hora_disponivel = (float) $hora_disponivel;
+    $hora_minima = $hora_tarefa * 1.1; 
+    if ($hora_disponivel < $hora_minima) {
+        return "$nome_funcionario não tem horas suficientes para a tarefa $nome_tarefa.";
+    }
+    
+    if ($nivel_experiencia == 'júnior' && $complexidade_tarefa != 'baixa') {
+        return "$nome_funcionario (Júnior) não pode assumir a tarefa $nome_tarefa de complexidade $complexidade_tarefa.";
+    } elseif ($nivel_experiencia == 'pleno' && $complexidade_tarefa == 'alta') {
+        return "$nome_funcionario (Pleno) não pode assumir a tarefa $nome_tarefa de complexidade alta.";
+    } elseif ($nivel_experiencia == 'sênior' && $complexidade_tarefa == 'baixa') {
+        return "$nome_funcionario (Sênior) deveria priorizar tarefas de complexidade média ou alta.";
+    }
+
+    
+    return "$nome_funcionario pode assumir a tarefa $nome_tarefa.";
+}
+
+
+
