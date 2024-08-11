@@ -48,10 +48,10 @@ function pode_realizar($hora_tarefa, $complexidade_tarefa, $hora_disponivel, $ni
 
 
 function calcular_dias_ferias($dias_trabalhados) {
-    // Calcula a quantidade de dias de férias com base nos dias trabalhados
-    $dias_ferias = floor($dias_trabalhados / 30); // 1 dia de férias a cada 30 dias trabalhados
+   
+    $dias_ferias = floor($dias_trabalhados / 30); 
 
-    // Limita o número máximo de dias de férias a 30
+    
     if ($dias_ferias > 30) {
         $dias_ferias = 30;
     }
