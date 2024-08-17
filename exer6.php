@@ -1,22 +1,22 @@
 <?php require_once ("cabecalho.php");?>
 
-<h4>Cálculo Bônus Anual</h4>
-<form action="exer3resp.php" method="POST">
+<h4>Cálculo Custo Projeto</h4>
+<form action="exer6resp.php" method="POST">
 
 <div class="row">
     <div class="col">
-        <label for="lucro_empresa">Lucros da Empresa</label>
-        <input type="number" id="lucro_empresa" name="lucro_empresa" class="form-control" placeholder="R$" />
+        <label for="hora_prevista">Horas Previstas</label>
+        <input type="number" id="hora_prevista" name="hora_prevista" class="form-control" />
     </div>
 
     <div class="col">
-        <label for="nome_funcionario">Nome do Funcionário</label>
-        <input type="text" id="nome_funcionario" name="nome_funcionario" class="form-control" />
+        <label for="taxa_hora">Valor por Hora</label>
+        <input type="number" id="taxa_hora" name="taxa_hora" class="form-control" placeholder="R$" />
     </div>    
 
     <div class="col">
-        <label for="desempenho">Escala de Desempenho (1 a 5)</label>
-        <input type="number" id="desempenho" name="desempenho" class="form-control" />
+        <label for="custo_adicional">Custo Adicional</label>
+        <input type="number" id="custo_adicional" name="custo_adicional" class="form-control" placeholder="R$" />
     </div>  
 </div>
 
