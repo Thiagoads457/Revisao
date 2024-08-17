@@ -10,20 +10,20 @@
     </div>
 
     <div class="col -md-6 col-lg-4">
-        <label for="quantidade_atividade">Qnt. Atividade para o Projeto</label>
-        <input type="number" id="quantidade_atividade" name="quantidade_atividade" class="form-control" />
+        <label for="qnt_atividade">Qnt. Atividade para o Projeto</label>
+        <input type="number" id="qnt_atividade" name="qnt_atividade" class="form-control" />
     </div>  
 </div>  
 
 <div class="row">
     <div class="col -md-6 col-lg-4">
-        <label for="atividade_desenvolvida">Qnt. de Atividades Desenvolvidas</label>
-        <input type="number" id="atividade_desenvolvida" name="atividade_desenvolvida" class="form-control" />
+        <label for="atv_desenvolvida">Qnt. de Atividades Desenvolvidas</label>
+        <input type="number" id="atv_desenvolvida" name="atv_desenvolvida" class="form-control" />
     </div>
     
     <div class="col -md-6 col-lg-4">
-        <label for="atividade_desenvolvida_equipe">Qnt. de Atividades Desenvolvidas pela Equipe</label>
-        <input type="number" id="atividade_desenvolvida_equipe" name="atividade_desenvolvida_equipe" class="form-control" />
+        <label for="atv_desenvolvida_equipe">Qnt. de Atividades Desenvolvidas pela Equipe</label>
+        <input type="number" id="atv_desenvolvida_equipe" name="atv_desenvolvida_equipe" class="form-control" />
     </div>  
 
 </div>

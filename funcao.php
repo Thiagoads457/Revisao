@@ -36,7 +36,7 @@ function pode_realizar($hora_tarefa, $complexidade_tarefa, $hora_disponivel, $ni
     }
     
     if ($nivel_experiencia == 'junior' && $complexidade_tarefa != 'baixa') {
-        return "$nome_funcionario (JUnior) não pode assumir a tarefa $nome_tarefa de complexidade $complexidade_tarefa.";
+        return "$nome_funcionario (Junior) não pode assumir a tarefa $nome_tarefa de complexidade $complexidade_tarefa.";
     } elseif ($nivel_experiencia == 'pleno' && $complexidade_tarefa == 'alta') {
         return "$nome_funcionario (Pleno) não pode assumir a tarefa $nome_tarefa de complexidade alta.";
     } elseif ($nivel_experiencia == 'senior' && $complexidade_tarefa == 'baixa') {
@@ -66,6 +66,15 @@ function calcular_projeto($hora_prevista, $valor_hora, $custo_adicional){
     $custo = ($hora_prevista * $valor_hora) + $custo_adicional;
 
     return $custo;
+
+}
+
+function calcular_desempenho($qnt_atividade, $atv_desenvolvida, $atv_desenvolda_equipe, $prazo_final){
+
+    $total = $qnt_atividade - $atv_desenvolvida;
+    if($qnt_atividade > $atv_desenvolvida && $qnt_atividade > $atv_desenvolda_equipe){
+        return "Projeto não finalizado, falta(m) $total atividade(s) para ser(em) finalizada(s) em $prazo_final dias. " ;
+    }
 
 }
 
