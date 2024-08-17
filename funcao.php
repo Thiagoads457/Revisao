@@ -69,12 +69,16 @@ function calcular_projeto($hora_prevista, $valor_hora, $custo_adicional){
 
 }
 
-function calcular_desempenho($qnt_atividade, $atv_desenvolvida, $atv_desenvolda_equipe, $prazo_final){
+function calcular_desempenho($qnt_atividade, $atv_desenvolvida, $atv_desenvolvida_equipe, $prazo_final){
 
     $total = $qnt_atividade - $atv_desenvolvida;
-    if($qnt_atividade > $atv_desenvolvida && $qnt_atividade > $atv_desenvolda_equipe){
+    if($qnt_atividade > $atv_desenvolvida && $qnt_atividade > $atv_desenvolvida_equipe){
         return "Projeto não finalizado, falta(m) $total atividade(s) para ser(em) finalizada(s) em $prazo_final dias. " ;
-    }
+    } elseif($qnt_atividade < $atv_desenvolvida || $qnt_atividade < $atv_desenvolvida_equipe ){
+        return "Verificar parametros inseridos";
+    } elseif($qnt_atividade == $atv_desenvolvida || $qnt_atividade == $atv_desenvolvida_equipe ){
+        return "Projeto concluido com Sucesso !!!";
+    
+    }   
 
 }
-
