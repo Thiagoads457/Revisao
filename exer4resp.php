@@ -9,7 +9,7 @@ $hora_disponivel = $_POST['hora_disponivel'];
 $nivel_experiencia = $_POST['nivel_experiencia'];
 $nome_funcionario = $_POST['nome_funcionario'];
 
-$realizar_tarefa = pode_realizar($nome_tarefa, $hora_tarefa, $complexidade_tarefa, $nome_funcionario, $hora_disponivel, $nivel_experiencia);
+$realizar_tarefa = pode_realizar($hora_tarefa, $complexidade_tarefa, $hora_disponivel, $nivel_experiencia, $nome_funcionario, $hora_tarefa );
 
 echo $realizar_tarefa;
 

@@ -27,18 +27,19 @@ function calcular_bonus($lucro_empresa, $desempenho){
 }
 
 function pode_realizar($hora_tarefa, $complexidade_tarefa, $hora_disponivel, $nivel_experiencia, $nome_funcionario, $nome_tarefa) {
-    $hora_tarefa = (float) $hora_tarefa;
-    $hora_disponivel = (float) $hora_disponivel;
+    $hora_tarefa = floatval($hora_tarefa);
+    $hora_disponivel = floatval($hora_disponivel);
     $hora_minima = $hora_tarefa * 1.1; 
+    
     if ($hora_disponivel < $hora_minima) {
         return "$nome_funcionario não tem horas suficientes para a tarefa $nome_tarefa.";
     }
     
-    if ($nivel_experiencia == 'júnior' && $complexidade_tarefa != 'baixa') {
-        return "$nome_funcionario (Júnior) não pode assumir a tarefa $nome_tarefa de complexidade $complexidade_tarefa.";
+    if ($nivel_experiencia == 'junior' && $complexidade_tarefa != 'baixa') {
+        return "$nome_funcionario (JUnior) não pode assumir a tarefa $nome_tarefa de complexidade $complexidade_tarefa.";
     } elseif ($nivel_experiencia == 'pleno' && $complexidade_tarefa == 'alta') {
         return "$nome_funcionario (Pleno) não pode assumir a tarefa $nome_tarefa de complexidade alta.";
-    } elseif ($nivel_experiencia == 'sênior' && $complexidade_tarefa == 'baixa') {
+    } elseif ($nivel_experiencia == 'senior' && $complexidade_tarefa == 'baixa') {
         return "$nome_funcionario (Sênior) deveria priorizar tarefas de complexidade média ou alta.";
     }
 
@@ -49,7 +50,7 @@ function pode_realizar($hora_tarefa, $complexidade_tarefa, $hora_disponivel, $ni
 
 function calcular_dias_ferias($dias_trabalhados) {
    
-    $dias_ferias = floor($dias_trabalhados / 30); 
+    $dias_ferias = intdiv($dias_trabalhados, 30); 
 
     
     if ($dias_ferias > 30) {
