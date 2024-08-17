@@ -61,5 +61,11 @@ function calcular_dias_ferias($dias_trabalhados) {
 }
 
 
+function calcular_projeto($hora_prevista, $valor_hora, $custo_adicional){
 
+    $custo = ($hora_prevista * $valor_hora) + $custo_adicional;
+
+    return $custo;
+
+}
 

@@ -10,8 +10,8 @@
     </div>
 
     <div class="col">
-        <label for="taxa_hora">Valor por Hora</label>
-        <input type="number" id="taxa_hora" name="taxa_hora" class="form-control" placeholder="R$" />
+        <label for="valor_hora">Valor por Hora</label>
+        <input type="number" id="valor_hora" name="valor_hora" class="form-control" placeholder="R$" />
     </div>    
 
     <div class="col">
